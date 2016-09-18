@@ -1,0 +1,5 @@
+The following caused errors :
+
+pic #20009 (.gif) failed to download.
+
+2 files downloaded
