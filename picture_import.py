@@ -7,7 +7,7 @@ import socket
 socket.setdefaulttimeout(30) #the request is considered to have timed out after 30 seconds
 
 start = 20000
-end   = 20100
+end   = 30000
 
 n = 1 #this will be incremented each time we download a pic
 
@@ -77,15 +77,15 @@ for i in range(start, end+1) :
 			
 			#creating the file name
 			if(n<10):
-				filename = 'img00000' + str(n)
-			elif (i<100):
-				filename = 'img0000'  + str(n)
-			elif (i<1000):
-				filename = 'img000'   + str(n)
-			elif (i<10000):
-				filename = 'img00'    + str(n)
+				filename = 'img0000' + str(n)
+			elif (n<100):
+				filename = 'img000'  + str(n)
+			elif (n<1000):
+				filename = 'img00'   + str(n)
+			elif (n<10000):
+				filename = 'img0'    + str(n)
 			else:
-				filename = 'img0'     + str(n)
+				filename = 'img'     + str(n)
 
 
 			#attempting to download the picture	
