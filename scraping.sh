@@ -3,6 +3,7 @@
 cd gifs/
 mkdir ../mp4
 
+# first, turning all gifs into mp4 files of size 1280x720
 for file in `ls`
 do
 	output="${file/.gif/.mp4}"
@@ -17,6 +18,7 @@ do
 	echo "$file converted"
 done
 
+# concatenation of all mp4 files into a final output
 cd ../mp4
 
 for f in `ls`; do echo "file $f" >> list.txt; done
