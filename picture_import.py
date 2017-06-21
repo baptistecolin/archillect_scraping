@@ -3,11 +3,17 @@ from urllib.error import URLError
 from bs4 import BeautifulSoup as bs
 from math import floor
 import socket
+import os, sys
+
+if not(os.path.exists("./gifs")):
+	os.mkdir("gifs")
+elif not(os.path.isdir("gifs")):
+	raise Exception("the path ./gifs is already occupied by a file that is not a directory")
 
 socket.setdefaulttimeout(30) #the request is considered to have timed out after 30 seconds
 
-start = 20000
-end   = 30000
+start = 0
+end   = 100000
 
 n = 1 #this will be incremented each time we download a pic
 
